@@ -1,4 +1,5 @@
 # AI Chat Assistant
+![image](https://github.com/user-attachments/assets/a59f691b-cb27-4625-bab1-b46fffada798)
 
 A simple, interactive chat application powered by the Groq LLM API. This application features a React frontend and a Flask backend, allowing users to engage in conversations with an AI assistant.
 
