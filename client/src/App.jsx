@@ -60,7 +60,16 @@ function App() {
               p: ({node, ...props}) => <p className="markdown-p" {...props} />,
               ul: ({node, ...props}) => <ul className="markdown-ul" {...props} />,
               li: ({node, ...props}) => <li className="markdown-li" {...props} />,
-              code: ({node, ...props}) => <code className="markdown-code" {...props} />
+              code: ({node, inline, ...props}) => 
+                inline ? (
+                  <code className="markdown-code" {...props} />
+                ) : (
+                  <code {...props} />
+                ),
+              pre: ({node, ...props}) => <pre className="markdown-pre" {...props} />,
+              table: ({node, ...props}) => <table className="markdown-table" {...props} />,
+              th: ({node, ...props}) => <th className="markdown-th" {...props} />,
+              td: ({node, ...props}) => <td className="markdown-td" {...props} />
             }}
           >
             {response}
